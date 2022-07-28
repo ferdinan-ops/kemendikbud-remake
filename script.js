@@ -18,16 +18,14 @@ window.onload = () => {
   ];
 
   arrowRight.addEventListener("click", () => {
-    image.classList.add("fade");
     judul.classList.add("ganti");
+    image.style.backgroundImage = `url(img/${gambar[i + 1]}.jpg)`;
     setTimeout(() => {
-      image.style.backgroundImage = `url(img/${gambar[i + 1]}.jpg)`;
       sliderWidth += 40;
       sliderBar.style.width = `${sliderWidth}px`;
       countLeft.textContent = `0${count + 1}`;
       judul.textContent = judulText[i + 1];
       judul.classList.remove("ganti");
-      image.classList.remove("fade");
       count++;
       i++;
       cekLokasi(i);
@@ -35,16 +33,14 @@ window.onload = () => {
   });
 
   arrowLeft.addEventListener("click", () => {
-    image.classList.add("fade");
     judul.classList.add("ganti");
+    image.style.backgroundImage = `url(img/${gambar[i - 1]}.jpg)`;
     setTimeout(() => {
-      image.style.backgroundImage = `url(img/${gambar[i - 1]}.jpg)`;
       sliderWidth -= 40;
       sliderBar.style.width = `${sliderWidth}px`;
       countLeft.textContent = `0${count - 1}`;
       judul.textContent = judulText[i - 1];
       judul.classList.remove("ganti");
-      image.classList.remove("fade");
       count--;
       i--;
     }, 500);

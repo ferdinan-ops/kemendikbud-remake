@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    /* outline: 1px solid red; */
 }
 
 body {
@@ -35,8 +34,7 @@ body {
     min-width: 100vw;
     position: absolute;
     z-index: -2;
-    transition: opacity .5s ease-in-out;
-    opacity: 1;
+    transition: 0.5s ease-in-out;
 }
 
 .container::after {
@@ -81,6 +79,7 @@ ul li {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 ul li i {
@@ -100,6 +99,13 @@ ul li i {
     color: rgba(154, 154, 154, 0.9);
     z-index: 1;
     cursor: pointer;
+    transition: .2s ease;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    border: 1px solid rgba(226, 226, 226, 0.9);
+    color: rgba(226, 226, 226, 0.9);
 }
 
 .arrow-left {
@@ -164,7 +170,6 @@ ul li i {
     content: '';
     height: 5px;
     width: 52%;
-    /* margin-top: 10px; */
     background-color: #DDD;
     position: absolute;
     top: 35px;
@@ -182,7 +187,6 @@ ul li i {
 }
 
 .bar {
-    /* width: 60px; */
     width: 0;
     height: 4px;
     background-color: white;
@@ -197,10 +201,6 @@ ul li i {
     gap: 5px;
     align-items: center;
     margin-bottom: 10px;
-}
-
-.fade {
-    opacity: 0.2;
 }
 
 .ganti {
