@@ -62,7 +62,7 @@ header {
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     color: #DDD;
     text-decoration: none;
     line-height: 18px;
@@ -206,4 +206,56 @@ ul li i {
 .ganti {
     transform: translateY(20px);
     opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .brand img {
+        width: 50px;
+    }
+
+    .brand span {
+        display: none;
+    }
+
+    ul {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .side-left h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .side-right {
+        display: none;
+    }
+
+    .bg-image {
+        bottom: 0;
+        /* transform: translateY(10px); */
+    }
+
+    .arrow-left,
+    .arrow-right {
+        width: 140px;
+        height: 140px;
+        font-size: 14px;
+    }
+
+    .arrow-left {
+        transform: translate(-70px, -70px);
+    }
+
+    .arrow-right {
+        transform: translate(70px, -70px);
+    }
+
+    .arrow-left i {
+        transform: translate(28px, -25px);
+    }
+
+    .arrow-right i {
+        transform: translate(-28px, -25px);
+    }
 }
